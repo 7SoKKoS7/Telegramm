@@ -10,7 +10,7 @@ async def command_start(message : types.message):
         await bot.send_message(message.from_user.id, 'Привет', reply_markup=kb_client)
         await message.delete()
     except:
-        await message.reply('Общение с ботом через ЛС, напишите ему:\nhttps://t.me/Test_kokoc_bot')
+        await message.reply('Общение с ботом через ЛС, напишите ему:\nhttps://t.me/TVPK_bot')
 
 # @dp.message_handler(commands=['Режим_работы'])
 async def pizza_open_command(message : types.Message):
