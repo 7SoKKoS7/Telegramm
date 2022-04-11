@@ -16,9 +16,10 @@ async def command_start(message: types.message):
 async def pizza_open_command(message: types.Message):
 	await bot.send_message(message.from_user.id, 'Вс-Чт с 9:00 до 20:00, Пт-Сб с 10:00 до 23:00')
 
-# @dp.message_handler(commands=['Расположение'])
+# @dp.message_handler(commands=['Ваш ID'])
 async def pizza_place_command(message : types.Message):
-	await bot.send_message(message.from_user.id, 'Украина', reply_markup=ReplyKeyboardRemove())
+	await bot.send_message(message.from_user.id, f"Ваш ID: {message.from_user.id}", reply_markup=ReplyKeyboardRemove())
+
 
 # @dp.message_handler(commands=['Меню'])
 # async def pizza_menu_command(message : types.Message):
@@ -29,5 +30,5 @@ async def pizza_place_command(message : types.Message):
 def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(command_start, commands=['start', 'help'])
     dp.register_message_handler(pizza_open_command, commands=['Режим_работы'])
-    dp.register_message_handler(pizza_place_command, commands=['Расположение'])
+    dp.register_message_handler(pizza_place_command, commands=['Ваш_ID'])
 
