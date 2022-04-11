@@ -1,5 +1,5 @@
 from aiogram.utils import executor
-from create_bot import dp
+from create_bot import dp, cur
 from handlers import client, admin, other
 
 
