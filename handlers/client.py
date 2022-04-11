@@ -18,7 +18,7 @@ async def pizza_open_command(message: types.Message):
 
 # @dp.message_handler(commands=['Ваш ID'])
 async def pizza_place_command(message : types.Message):
-	await bot.send_message(message.from_user.id, f"Ваш ID: {message.from_user.id}", reply_markup=ReplyKeyboardRemove())
+	await bot.send_message(message.from_user.id, f"Ваш ID: {message.from_user.id}")#, reply_markup=ReplyKeyboardRemove())
 
 
 # @dp.message_handler(commands=['Меню'])
