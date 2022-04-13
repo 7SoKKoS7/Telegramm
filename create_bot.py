@@ -28,11 +28,13 @@ except mariadb.Error as e:
 # Get Cursor
 cur = conn.cursor()
 
-cur.execute("SELECT * FROM AMain WHERE Name = 'Igor'")
 
-
-for Name in cur:
-    print(f"First name: {Name}")
+# TEST
+# cur.execute("SELECT * FROM AMain WHERE Name = 'Igor'")
+#
+#
+# for Name in cur:
+#     print(f"First name: {Name}")
 
 
 
