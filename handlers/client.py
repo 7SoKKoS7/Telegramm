@@ -2,12 +2,13 @@ from aiogram import types, Dispatcher
 from create_bot import dp, bot
 from keyboards import kb_client
 # from aiogram.types import ReplyKeyboardRemove
-from  data_base import sqlite_db
+from data_base import sqlite_db
 import datetime
 
 
+
 async def echo_chat_in_base(message: types.message):
-    await bot.send_message(message.from_user.id, 'Повідомлення отримано, очикуйте контакту тест')
+    await bot.send_message(message.from_user.id, 'Повідомлення отримано, очикуйте контакту - це тест')
     str_client = (message.from_user.id, message.text, datetime.datetime.now())
     sqlite_db.cur.execute('INSERT INTO client_base VALUES (NULL, ?, ?, ?)', str_client)
     sqlite_db.base.commit()
